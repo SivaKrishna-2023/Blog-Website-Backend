@@ -11,7 +11,7 @@ const cookieParser = require('cookie-parser')
 const authRoute = require('./routes/auth')
 const userRoute = require('./routes/user')
 const postRoute = require('./routes/post')
-const commentRoute = require('./routes/Comments')
+const commentRoute = require('./routes/comments')
 
 
 const corsOptions = {
