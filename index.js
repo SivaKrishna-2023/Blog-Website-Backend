@@ -3,17 +3,8 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const multer = require('multer');
-<<<<<<< HEAD
 const path = require('path');
 const cookieParser = require('cookie-parser');
-=======
-const path = require('path')
-const cookieParser = require('cookie-parser')
-const authRoute = require('./routes/auth')
-const userRoute = require('./routes/user')
-const postRoute = require('./routes/post')
-const commentRoute = require('./routes/comments')
->>>>>>> ed696af11c12946bc6af170f216b4586daa1d20d
 
 const authRoute = require('./routes/auth');
 const userRoute = require('./routes/user');
@@ -58,7 +49,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-<<<<<<< HEAD
 // Routes
 app.post('/api/upload', upload.single('file'), (req, res) => {
     res.status(200).json({ message: 'Image uploaded successfully', filename: req.file.filename });
@@ -84,9 +74,3 @@ app.listen(PORT, () => {
     connectDB();
     console.log(`Server running on port ${PORT}`);
 });
-=======
-app.listen(process.env.PORT, () =>{
-    ConnectDB();
-    console.log("app listening on port " + process.env.PORT)
-})
->>>>>>> ed696af11c12946bc6af170f216b4586daa1d20d
